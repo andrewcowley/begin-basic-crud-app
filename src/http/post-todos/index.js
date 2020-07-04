@@ -6,8 +6,8 @@ exports.handler = async function post (req) {
   todo.created = todo.created || Date.now()
   todo.completed = !!todo.completed
   await data.set({
-    table: 'todos',
-    ...todo
+    table: 'inc',
+    inc: {value: 0}
   })
   return {
     statusCode: 302,
