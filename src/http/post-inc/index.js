@@ -6,7 +6,8 @@ exports.handler = async function post (req) {
     table: 'inc',
     value: 0,
     nine: 9,
-    aString: 'Great beach!'
+    aString: 'Great beach!',
+    key: 'the_value'
   })
   return {
     statusCode: 200
