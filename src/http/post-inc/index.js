@@ -2,13 +2,11 @@ let arc = require('@architect/functions')
 let data = require('@begin/data')
 
 exports.handler = async function post (req) {
-  await data.set({
-    table: 'inc',
-    value: 0,
-    nine: 9,
-    aString: 'Great beach!',
-    key: 'the_value'
-  })
+ 
+  let table = 'inc';
+  let key = 'the_value';
+
+  await data.incr({table, key, prop: 'pulses'})
   return {
     statusCode: 200
   }
